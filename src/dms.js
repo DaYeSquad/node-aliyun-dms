@@ -59,7 +59,7 @@ module.exports = function (options) {
             ReplyToAddress: replyToAddress,
             AddressType: addressType,
             ToAddress: toAddress,
-            FromAlias: fromAlias,
+            FromAlias: urlencode(fromAlias),
             Subject:  urlencode(subject),
             HtmlBody: urlencode(htmlBody),
             TextBody: urlencode(textBody)

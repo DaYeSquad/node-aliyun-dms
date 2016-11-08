@@ -24,8 +24,6 @@ var api = function (bundleInterface) {
         
         // queryString
         _queryString = _interface.getQueryString(params);
-        
-        //console.log(_queryString);
                 
         urllib.request(_queryString, {
             method: 'GET',
@@ -38,12 +36,11 @@ var api = function (bundleInterface) {
                 throw err;
                 _callback(err,null);  
                 return; 
-            }            
-            
-            var xml = data.toString();
-            var json = parser.toJson(xml); //returns a string containing the JSON structure by default 
+            }
 
-            _callback(null,JSON.parse(json));            
+            var json = data.toString();
+
+            _callback(null, JSON.parse(json));
 
         });
     };
