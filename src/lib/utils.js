@@ -58,7 +58,7 @@ utils.objToArray = function (object,clear) {
     for (var key in _obj) {
         if(clear){      
                   
-            if(key === "HtmlBody" || key === "TextBody" || key === "Subject"){
+            if(key === "HtmlBody" || key === "TextBody" || key === "Subject" || key === "FromAlias"){
                 _array.push(key + '=' + _obj[key]); 
             }else{
                 _array.push(key + '=' + utils.topEscape(_obj[key]));

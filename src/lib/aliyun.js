@@ -24,7 +24,7 @@ var aliyun = function (options) {
     */
     _protected.getSortString = function(queryArray){
         return utils.sortArray(queryArray).join('&');
-    }
+    };
     
     /**
      * 生成查询对象
@@ -42,7 +42,7 @@ var aliyun = function (options) {
         paramsObj = {
             'SignatureVersion': '1.0',
             'SignatureMethod': 'HMAC-SHA1',
-            'Fommat': defaults.format,
+            'Format': defaults.format,
             'Version': defaults.version,
             'AccessKeyId': defaults.accessid,
             'Timestamp': utils.formatDate(_date),
