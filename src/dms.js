@@ -45,12 +45,13 @@ module.exports = function (options) {
      * @param  {Boolean}  replyToAddress 是否使用管理控制台中配置的回信地址（状态必须是验证通过）
      * @param  {Number}   addressType    取值范围0~1: 0为随机账号(推荐,可以更好的统计退信情况);1为发信地址
      * @param  {String}   toAddress      目标地址，多个Email地址可以逗号分隔
+     * @param  {String}   fromAlias      发信人昵称,长度小于15个字符 例如:发信人昵称设置为"小红"，发信地址为"test@example.com"，收信人看到的发信地址为"小红"<test@example.com>
      * @param  {String}   subject        邮件主题
      * @param  {String}   htmlBody       邮件html正文
      * @param  {String}   textBody       邮件text正文
      * @param  {Function} callback       回调函数
      */
-     function sendSingleMail(accountName,replyToAddress,addressType,toAddress,subject,htmlBody,textBody,callback){
+     function sendSingleMail(accountName,replyToAddress,addressType,toAddress,fromAlias,subject,htmlBody,textBody,callback){
 
         that._submit({
             Action: 'SingleSendMail',
@@ -58,6 +59,7 @@ module.exports = function (options) {
             ReplyToAddress: replyToAddress,
             AddressType: addressType,
             ToAddress: toAddress,
+            FromAlias: fromAlias,
             Subject:  urlencode(subject),
             HtmlBody: urlencode(htmlBody),
             TextBody: urlencode(textBody)
