@@ -2,6 +2,12 @@
 
 nodejs版本阿里云DMS服务.
 
+## Why fork
+
+因为该 API 没有支持发件使用 FromAlias 这个参数，而我们需要别名
+
+## 下面是原文
+
 实现了 aliyun dms签名服务以及基础使用方法，具体的使用参数请参考aliyun dms api.
 
 * submit    提交参数调用需要的功能
@@ -9,7 +15,7 @@ nodejs版本阿里云DMS服务.
 
 ## Usage
 
-- Install 
+- Install
 
 	```
 	$ npm install node-aliyun-dms
@@ -23,21 +29,21 @@ nodejs版本阿里云DMS服务.
 	    'accessid': 'testId',
 	    'accesskey': 'testKeySecret'
 	});
-	
+
 	```
 
 - Submit Operation
 
 	```
 	var callback = function(err,data){
-	
+
 	    if(err){
 	        console.log(err);
 	        return;
 	    }
 	    console.log('Callback: \n',data);
 	};
-	
+
 	/**
 	 * sendSingleMail - 单个发送邮件
 	 * @param  {String}   accountName    管理控制台中配置的发信地址
@@ -50,7 +56,7 @@ nodejs版本阿里云DMS服务.
 	 * @param  {Function} callback       回调函数
 	 */
 	dms.sendSingleMail(...);
-	
+
 	/**
 	 * sendBatchMail - 批量发送邮件
 	 * @param  {String}   accountName   管理控制台中配置的发信地址
@@ -61,7 +67,7 @@ nodejs版本阿里云DMS服务.
 	 * @param  {Function} callback      回调函数
 	 */
 	 dms.sendBatchMail(...);
-	 
+
 	```
 
 ## Reference
@@ -69,10 +75,10 @@ nodejs版本阿里云DMS服务.
 - Api
 
 	[http://help.aliyun.com/document_detail/directmail/api-reference/overview.html?spm=5176.777602103.6.76.OLvdmM](http://help.aliyun.com/document_detail/directmail/api-reference/overview.html?spm=5176.777602103.6.76.OLvdmM)
-	
-- NPM 
 
-	[https://www.npmjs.com/package/node-aliyun-dms](https://www.npmjs.com/package/node-aliyun-dms)	
+- NPM
+
+	[https://www.npmjs.com/package/node-aliyun-dms](https://www.npmjs.com/package/node-aliyun-dms)
 
 ## License
 
