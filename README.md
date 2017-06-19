@@ -18,7 +18,7 @@ nodejs版本阿里云DMS服务.
 - Install
 
 	```
-	$ npm install node-aliyun-dms
+	$ npm install gago-aliyun-dms
 	```
 
 - Initialize

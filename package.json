@@ -1,8 +1,8 @@
 {
-  "name": "node-aliyun-dms",
+  "name": "gago-aliyun-dms",
   "version": "1.0.3",
-  "description": "aliyun direct mail service for nodejs",
-  "homepage": "https://github.com/MT-Libraries/node-aliyun-dms",
+  "description": "aliyun direct mail service for nodejs folked from ",
+  "homepage": "https://github.com/DaYeSquad/node-aliyun-dms",
   "main": "./src/dms.js",
   "scripts": {
     "test": "mocha test"
@@ -12,7 +12,7 @@
     "dms",
     "node"
   ],
-  "author": "Thonatos.Yang",
+  "author": "Frank Lin",
   "license": "MIT",
   "dependencies": {
     "urlencode": "^1.1.0",
@@ -21,11 +21,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:MT-Libraries/node-aliyun-dms.git"
-  },
-  "bugs": {
-    "url": "https://github.com/MT-Libraries/node-aliyun-dms/issues",
-    "mail": ""
+    "url": "https://github.com/DaYeSquad/node-aliyun-dms"
   },
   "devDependencies": {
     "should": "^7.1.1"
